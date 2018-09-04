@@ -1,0 +1,564 @@
+.main {
+    min-height: 100%;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: #fff;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*main_top开始*/
+
+.main_top {
+    height: 50px;
+    background-color: #fff;
+    box-shadow: 0 1px 12px #ececec;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.bread {
+    line-height: 50px;
+}
+
+.bread a {
+    color: #333;
+}
+
+.bread a.current {
+    color: #0086dd;
+    font-weight: 600;
+}
+
+/*.bread a:hover {
+    color: #0086dd;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+/*漂浮栏*/
+
+/*.funtags {
+    position: relative;
+}
+
+.tags_list {
+    position: relative;
+}
+
+.tags_list>a {
+    line-height: 50px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.tags_list a:hover>span,
+.tags_list a.on>span {
+    color: #0086dd;
+}
+
+.tags_list i {
+    display: inline-block;
+    vertical-align: middle;
+    width: 14px;
+    height: 16px;
+    background: url("../images/sprite3.png") no-repeat 0 0;
+}
+
+.download_btn i {
+    width: 14px;
+    height: 16px;
+    background-image: url('../images/download.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.print_btn i {
+    width: 16px;
+    height: 15px;
+    background-position: -36px 0;
+}
+
+.collect_btn i {
+    width: 17px;
+    height: 16px;
+    background-position: -54px 0;
+}
+
+.more_btn i {
+    width: 17px;
+    height: 4px;
+    background-position: -72px 0;
+}
+
+.email_btn i {
+    width: 16px;
+    height: 12px;
+    background-position: -91px 0;
+}
+
+.share_btn i {
+    width: 14px;
+    height: 14px;
+    background-position: -110px 0;
+}
+
+.send_btn i {
+    width: 14px;
+    height: 13px;
+    background-position: -129px 0;
+}
+
+.postil_btn i {
+    width: 16px;
+    height: 17px;
+    background-position: -145px 0;
+}
+
+.find_btn:hover i,
+.find_btn.on i {
+    background-position: 0 -18px;
+}
+
+.download_btn:hover i,
+.download_btn.on i {
+    background-position: 0 -18px;
+}
+
+.print_btn:hover i,
+.print_btn.on i {
+    background-position: -36px -18px;
+}
+
+.collect_btn.on i {
+    background-position: -54px -18px;
+}
+
+.more_btn:hover>i,
+.more_btn.on i {
+    background-position: -72px -18px;
+}
+
+.email_btn:hover i,
+.email_btn.on i {
+    background-position: -91px -18px;
+}
+
+.share_btn:hover i,
+.share_btn.on i {
+    background-position: -110px -18px;
+}
+
+.send_btn:hover i,
+.send_btn.on i {
+    background-position: -129px -18px;
+}
+
+.postil_btn:hover i,
+.postil_btn.on i {
+    background-position: -145px -18px;
+}
+
+.more_box {
+    width: 108px;
+    border: 1px solid #eee;
+    position: absolute;
+    right: -20px;
+    top: 40px;
+    z-index: 2;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px 3px #f3f3f3;
+    border-radius: 3px;
+}
+
+.more_box a {
+    line-height: 30px;
+    padding-left: 15px;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.more_box i,
+.more_box span {
+    cursor: pointer;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+/*main_top结束*/
+
+
+/*左半部分开始*/
+
+.details-l {
+    width: 830px;
+    padding-bottom: 30px;
+    /*position: relative;*/
+}
+
+.details-l h2 {
+    margin-bottom: 40px;
+    color: #0086dd;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.text_details {
+    line-height: 32px;
+}
+
+.button-wrapper {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.button-wrapper button {
+    display: inline-block;
+    width: 58px;
+    height: 30px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(221, 221, 221);
+    border-radius: 4px;
+    color: #333;
+    transition: all 0.3s;
+}
+
+.button-wrapper button:hover {
+    color: #0086dd;
+    border-color: #0086dd;
+}
+
+.prev_page {
+    margin-right: 10px;
+}
+
+
+
+
+
+/*左半部分结束*/
+
+
+/*右半部分开始*/
+
+.details-r {
+    width: 330px;
+    padding-left: 20px;
+    border-left: 1px solid #eee;
+    overflow: hidden;
+}
+
+.details-r>h3 {
+    padding-left: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    background: url(../images/content.png) 0px 5px no-repeat;
+}
+
+.content_wrapper {
+    /*height: 850px;*/
+}
+
+.content_ul {
+    height: 850px;
+    /*height: 250px;*/
+    padding-top: 8px;
+    padding-right: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.content_ul li {
+    padding-left: 28px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.content_ul li:hover,
+.content_ul li.cur_content {
+    color: #0086dd;
+}
+
+
+
+
+
+
+
+
+
+
+/*右半部分结束*/
+
+
+/*固定栏开始*/
+
+.fixedBox {
+    position: fixed;
+    right: 2%;
+    bottom: 15%;
+    /* display: none; */
+}
+
+.fixedBox>div {
+    width: 41px;
+    height: 45px;
+}
+
+.fixed_btn {
+    display: inline-block;
+    width: 39px;
+    height: 39px;
+    border: 1px solid #eee;
+    text-align: center;
+    line-height: 39px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px 1px #eee;
+}
+
+.catalog_btn {
+    background: #fff url(../images/content.png) no-repeat center center;
+}
+
+.catalog_btn:hover,
+.catalog_btn.on {
+    border: 1px solid #0086dd;
+    box-shadow: 0 0 1px 1px #eee;
+    background: #fff url(../images/content_hover.png) no-repeat center center;
+}
+
+.catalog_box {
+    position: absolute;
+    right: 45px;
+    bottom: 0;
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0 0 1px 1px #eee;
+    box-sizing: border-box;
+    padding: 20px;
+    line-height: 30px;
+    overflow-y: hidden;
+}
+
+.catalog_box ul {
+    position: absolute;
+}
+
+.backtop_btn {
+    background: #fff url(../images/top.png) no-repeat center center;
+}
+
+.backtop_btn:hover {
+    border: 1px solid #0086dd;
+    box-shadow: 0 0 1px 1px #eee;
+    background: #fff url(../images/top_hover.png) no-repeat center center;
+}
+
+
+
+
+
+
+
+
+
+
+/*固定栏结束*/
+
+
+/*加载动画开始*/
+
+.shadow {
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    background: #fff;
+    opacity: 0.8;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#19ffffff, endColorstr=#19ffffff);
+    /* display: none; */
+}
+
+.shadowBox {
+    position: relative;
+    left: 0;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    height: 200px;
+    width: 300px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    /* background: rgba(255, 255,255, 0.7); */
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+
+
+
+
+/*加载动画结束*/
+
+
+/*修改滚动条样式*/
+
+
+/*谷歌*/
+
+
+/*{
+    width: 200px;
+    height: 200px;
+    overflow: auto;
+}
+
+div {
+    width: 400px;
+    height: 400px;
+}
+*/
+
+
+/*整体*/
+
+.content_ul::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+
+
+
+
+
+
+/*两端按钮*/
+
+.content_ul::-webkit-scrollbar-button {
+    display: none;
+}
+
+
+
+
+
+
+
+
+/*外层轨道*/
+
+.content_ul::-webkit-scrollbar-track {}
+
+
+
+
+
+
+
+
+/*内层轨道*/
+
+.content_ul::-webkit-scrollbar-track-piece {
+    width: 5px;
+}
+
+
+
+
+
+
+
+
+/*可拖动部分*/
+
+.content_ul::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 4px;
+}
+
+.content_ul::-webkit-scrollbar-corner {}
+
+.content_ul::-webkit-scrollbar-resizer {}
+
+
+
+
+
+/*无结果*/
+
+.none {
+    min-height: 600px;
+    position: relative;
+}
+
+.none img {
+    position: absolute;
+    top: 80px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.none span {
+    position: absolute;
+    top: 370px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: inline-block;
+    height: 100px;
+    width: 500px;
+    line-height: 50px;
+    text-align: center;
+    color: #666;
+    font-size: 22px;
+}

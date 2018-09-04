@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>案例网</title>
+
+<script type="text/javascript" src="./js/jquery-2.1.1-min.js"></script>
+
+
+
+</head>
+<body>
+	<div id="detail"></div>
+</body>
+
+<script type="text/javascript">
+$(function(){
+	window.location.href=getContextPath()+"/pages/index.html"; 
+})
+function getContextPath(){     
+    var pathName = document.location.pathname;     
+    var index = pathName.substr(1).indexOf("/");     
+    var result = pathName.substr(0,index+1);     
+    return result;     
+} 
+</script>
+</html>

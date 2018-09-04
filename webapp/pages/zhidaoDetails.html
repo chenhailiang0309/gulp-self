@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>法信</title>
+    <link rel="stylesheet" href="../css/public.css?time=20180824_1" />
+    <link rel="stylesheet" href="../css/header.css?time=20180824_1" />
+    <link rel="stylesheet" href="../resource/font-awesome-4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="../css/zhidaoDetails.css?time=20180824_1" />
+</head>
+
+<body>
+    <!-- 顶部开始 -->
+    <div class="out-header">
+        <div class="logo">
+            <a href="http://103.254.65.115:18092" class="fazhi-logo fl"></a>
+        </div>
+        <div class="center">
+            <div class="searchBox clearfix">
+            <div class="searchIpt fl">
+                <!-- 模拟placeholder -->
+                <div class="placeholder">搜索您感兴趣的案例内容</div>
+                <!-- 搜索框 -->
+                <input type="text" id="search_inp" class="search_inp">
+                <!-- 文件名 -->
+                <!-- <div id="filename-wrapper-js" class="filename-wrapper" style="display: none;">
+                    <p id="filename" class="filename">文件名</p>
+                    <i id="close-filename-js" class="close-filename">x</i>
+                </div> -->
+                <!-- file控件 -->
+                <!-- <form id="fileForIE89" name="fileForIE89" method="post" enctype="multipart/form-data">
+                    <span id="upload" class="upload">
+                            <input type="file" name="upFile" id="upFile" onkeydown="if(event.keyCode==13)return false;">
+                        </span>
+                </form> -->
+                <!-- 全文搜索 -->
+                <div class="searchBtn" id="searchBtn">
+                    <i></i>
+                </div>
+            </div>
+            <!-- 联想词下拉框 -->
+            <div id="dropdown-wrapper" class="dropdown-wrapper" style="display: none;">
+                <!-- TODO -->
+            </div>
+            
+        </div>
+        </div>
+        <div class="nav">
+            <ul class="horizontal-ul clearfix">
+                <li>
+                    <a id="fazhi_link" class="header-text" href="javascript:void(0);">智能问答</a>
+                </li>
+                <li class="margin-left32">
+                    <a id="witnet_link" class="header-text header-text_h" href="javascript:void(0);">一站式服务</a>
+                </li>
+                <li class="margin-left32">
+                    <a id="caa_link" class="header-text" href="javascript:void(0);">类案推送</a>
+                </li>
+                <li class="margin-left32" style="position: relative;">
+                    <span class="user-info-module">
+                        <a class="login-text" href="http://103.254.65.115:18092/#/login">登录</a>
+                        <!-- <div class="gs-dropdown user-list-module dropdown-close">
+                            <span class="login-text-wrapper">
+                                <span class="login-text">国双1，您好</span>
+                                    <span class="gs-dropdown-link">
+                                                    <i class="gs-icon-down"></i>
+                                                </span>
+                                    </span>
+                        </div> -->
+                         </span>
+            <ul class="gs-dropdown-menu" style="display: none;">
+                <div class="gs-dropdown-items">
+                    <ul>
+                        <li class="gs-dropdown-item active">
+                            <a href="http://103.254.65.115:18092/#/person/info">个人信息</a>
+                        </li>
+                        <li class="gs-dropdown-item">
+                            <a href="http://103.254.65.115:18092/#/person/changePsw">修改密码</a>
+                        </li>
+                        <li class="gs-dropdown-item">
+                            <a href="http://103.254.65.115:18092/#/person/collect">我的收藏</a>
+                        </li>
+                        <li class="gs-dropdown-item">
+                            <a href="http://103.254.65.115:18092/#/person/record">查询记录</a>
+                        </li>
+                        <li class="gs-dropdown-item" id="logout">
+                            <a href="javascript:void(0);">退出登录</a>
+                        </li>
+                    </ul>
+                </div>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 顶部结束 -->
+    <!-- 主体部分开始 -->
+    <div id="main" class="main">
+        <div class="main_top">
+            <!--面包屑-->
+            <div class="inner">
+                <div class="bread fl">
+                    <a href="http://103.254.65.115:18092">首页</a> > <a href="javascript:void(0);" class="current">法信问答</a>
+                </div>
+                <div class="funtags fr">
+                    <!--漂浮-->
+                    <div class="tags_list">
+                        <!--  <a class="find_btn trans">
+                            <i></i>
+                            <span>全文查找</span>
+                        </a> -->
+                        <a class="download_btn trans ">
+                            <i></i>
+                            <span>下载</span>
+                        </a>
+                        <!--  <a class="print_btn trans">
+                            <i></i>
+                            <span>打印</span>
+                        </a> -->
+                        <a class="collect_btn trans">
+                            <i></i>
+                            <span>收藏</span>
+                        </a>
+                        <!-- <a class="more_btn">
+                            <i></i>
+                        </a>
+                        <div class="more_box" style="display: none;">
+                            <a class="email_btn trans">
+                                <i></i>
+                                <span>发邮件</span>
+                            </a>
+                            <a class="share_btn trans">
+                                <i></i>
+                                <span>分享</span>
+                            </a>
+                            <a class="send_btn trans">
+                                <i></i>
+                                <span>投稿</span>
+                            </a>
+                            <a class="postil_btn trans">
+                                <i></i>
+                                <span>全文批注</span>
+                            </a>
+                        </div> -->
+                    </div>
+                    <!--功能盒子-->
+                    <!-- <div class="tags_tabs">
+                        查找
+                        <div class="find_box tab_pop">
+                            <i class="close_btn fa fa-close"></i>
+                            <h5>全文查找</h5>
+                            <input type="text" id="find_text">
+                            <a id="find_all">查找</a>
+                            <a id="find_prev">上一个</a>
+                            <a id="find_next">下一个</a>
+                        </div>
+                        下载
+                        <div class="download_box tab_pop">
+                            下载什么
+                        </div>
+                        打印
+                        <div class="print_box tab_pop">
+                            打印盒子
+                        </div>
+                        收藏
+                        <div class="collect_box tab_pop">
+                            收藏盒子
+                        </div>
+                        邮件
+                        <div class="email_box tab_pop">
+                            邮件盒子
+                        </div>
+                        分享
+                        <div class="share_box tab_pop">
+                            分享盒子
+                        </div>
+                        批注
+                        <div class="postil_box tab_pop">
+                            批注盒子
+                        </div>
+                        投稿
+                        <div class="send_box tab_pop">
+                            投稿盒子
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="main_bottom inner clearfix">
+            <!-- 左侧 -->
+            <div class="detail-wrapper fl">
+                <div id="introduce" class="introduce">
+                    <!--  <h2>如何认定夫妻忠诚协议的效力</h2>
+                   <div class="features-wrapper">
+                       <span>婚姻</span>
+                       <span>财产纠纷</span>
+                       <span>抚养权</span>
+                   </div>
+                   <p>
+                       夫妻之间相互忠实既是道德的要求，也是《中华人民共和国婚姻法》第四条明文规定的法律义务。夫妻双方可以约定违反该项义务所应承担的财产责任。但本案中双方约定违反忠实义务的一方丧失婚生子的抚养权并每月支付高额的抚养费用，这与法律规定的子女抚养权的确定是从有利于子女身心健康，保障子女的合法权益出发的原则不符，属无效约定。协议约定的违反忠实义务的一方承担的财产责任亦过于严厉。即使仇甲是违反忠实义务的过错方，也有其合法的财产权益。如按此协议履行则可能造成仇甲生活困难，而张甲获利极大，双方利益过于失衡，也对仇甲抚养仇乙健康成长不利。故认定不能完全按照双方所签协议的后半部分内容履行，该部分脱离实际，履行将导致双方利益失衡，不能得到法院支持。【家庭关系】最高人民法院关于适用《中华人民共和国婚姻法》若干问题的解释（二）的补充规定 第二条人民法院受理申请宣告婚姻无效案件后，经审查确属无效婚姻的，应当依法作出宣告婚姻无效的判决。原告申请撤诉的，不予准许。
+                   </p>
+                   <div class="span-wrapper clearfix"><span id="casecause" class="casecause">婚姻家庭纠纷</span><span id="court" class="court">长沙市中级人民法院</span><span id="causeId" class="causeId">2017湘0124民初233号</span></div> -->
+                </div>
+                <div id="expert_opinion" class="expert_opinion">
+                    <!--  <h3>专家观点</h3>
+                   <div id="expert_container" class="container">
+                       <div class="p-wrapper">
+                           <p>
+                               <span class="b_4px"></span> 我国婚姻法虽然没有对重婚、同居等不忠事项的具体法律后果，以及除重婚、同居外的不忠事项作出明确规定，但也未禁止意思自治原则的适用，故可推定对于不忠事项及其具体法律后果，诸如不忠事由、承担责任的方式及数额等，可由夫妻双方自行约定。该约定只要符合民事法律行为的生效要件，便具有法律效力。
+                           </p>
+                           <div class="professor-wrapper clearfix">
+                               <span class="professor">杜万华</span>
+                               <span class="law-origin">中华人民共和国婚姻法案典</span>
+                           </div>
+                       </div>
+                       <div class="p-wrapper">
+                           <p>
+                               <span class="b_4px"></span> 我国婚姻法虽然没有对重婚、同居等不忠事项的具体法律后果，以及除重婚、同居外的不忠事项作出明确规定，但也未禁止意思自治原则的适用，故可推定对于不忠事项及其具体法律后果，诸如不忠事由、承担责任的方式及数额等，可由夫妻双方自行约定。该约定只要符合民事法律行为的生效要件，便具有法律效力。
+                           </p>
+                           <div class="professor-wrapper clearfix">
+                               <span class="professor">杜万华</span>
+                               <span class="law-origin">中华人民共和国婚姻法案典</span>
+                           </div>
+                       </div>
+                       <div class="p-wrapper">
+                           <p>
+                               <span class="b_4px"></span> 我国婚姻法虽然没有对重婚、同居等不忠事项的具体法律后果，以及除重婚、同居外的不忠事项作出明确规定，但也未禁止意思自治原则的适用，故可推定对于不忠事项及其具体法律后果，诸如不忠事由、承担责任的方式及数额等，可由夫妻双方自行约定。该约定只要符合民事法律行为的生效要件，便具有法律效力。
+                           </p>
+                           <div class="professor-wrapper clearfix">
+                               <span class="professor">杜万华</span>
+                               <span class="law-origin">中华人民共和国婚姻法案典</span>
+                           </div>
+                       </div>
+                   </div> -->
+                    <div class="more-wrapper clearfix">
+                        <a href="javascript:void(0);" id="expert_load_more" class="show_more fr" style="display: none;"><i class="row_icon"></i><span class="expert_more_text">查看更多</span><span class="more_num_export"></span></a>
+                    </div>
+                </div>
+                <div id="laws" class="laws-wrapper">
+                    <!-- <h3>法律法规</h3>
+                    <div id="laws_container" class="container">
+                         <div class="p-wrapper">
+                            <h4><span class="b_4px"></span>中华人民共和国婚姻法（2001）第四条</h4>
+                            <p><span>【家庭关系】</span>夫妻应当互相忠实，互相尊重;夫妻应当互相忠实，互相尊重;夫妻应当互相忠实，互相尊重;夫妻应当互相忠实，互相尊重;夫妻应当互相忠实，互相尊重;夫妻应当互相忠实，互相尊重;夫妻应当互相忠实，互相尊重;</p>
+                        </div>
+                        <div class="p-wrapper">
+                            <h4><span class="b_4px"></span>中华人民共和国婚姻法（2001）第四条</h4>
+                            <p><span>【家庭关系】</span>夫妻应当互相忠实，互相尊重;夫妻应当互相忠实，互相尊重;夫妻应当互相忠实，互相尊重;夫妻应当互相忠实，互相尊重;夫妻应当互相忠实，互相尊重;夫妻应当互相忠实，互相尊重;夫妻应当互相忠实，互相尊重;</p>
+                        </div>
+                        <div class="p-wrapper">
+                            <h4><span class="b_4px"></span>中华人民共和国婚姻法（2001）第四条</h4>
+                            <p><span>【家庭关系】</span>夫妻应当互相忠实，互相尊重;夫妻应当互相忠实，互相尊重;夫妻应当互相忠实，互相尊重;夫妻应当互相忠实，互相尊重;夫妻应当互相忠实，互相尊重;夫妻应当互相忠实，互相尊重;夫妻应当互相忠实，互相尊重;</p>
+                        </div>
+                    </div> -->
+                    <div class="more-wrapper clearfix">
+                        <a href="javascript:void(0);" id="laws_load_more" class="show_more fr" style="display: none;"><i class="row_icon"></i> <span class="laws_more_text">查看更多</span><span class="more_num_laws"></span></a>
+                    </div>
+                </div>
+                <!-- <div class="family-ties">
+                    <h3>家庭关系</h3>
+                    <p>夫妻应当互相忠实，互相尊重；家庭成员间应当敬老爱幼，互相帮助，维护平等、和睦、文明的婚姻家庭关系。</p>
+                </div> -->
+            </div>
+            <!-- 右侧 -->
+            <div class="column-wrapper fr">
+                <!-- <div class="keyword_wrapper column-part">
+                     <h5>关键词</h5>
+                    <ul id="keyword_ul" class="keyword_ul clearfix">
+                         <li>民法商法</li>
+                        <li>婚姻关系</li>
+                    </ul>
+                </div> -->
+                <div class="reference_case_wrapper column-part">
+                    <!-- <h5>参考案例<span class="change_more" style="display: none;">换一换</span></h5>
+                    <ul id="reference_case_ul" class="reference_case_ul">
+                         <li><span class="bl"></span>李某某与张某某离婚纠纷一案李某某与张某某离婚纠纷一案</li>
+                        <li><span class="bl"></span>李某某与张李某某与张某某离婚纠纷一案某某离婚纠纷一案</li>
+                        <li><span class="bl"></span>李某某与张李某某与张某某离婚纠纷一案某某离婚纠纷一案</li>
+                    </ul> -->
+                </div>
+                <div class="related_ques_wrapper column-part">
+                    <!-- <h5>相关问题<span class="change_more" style="display: none;">换一换</span></h5>
+                    <ul id="related_ques_ul" class="related_ques_ul">
+                         <li><span class="bl"></span>以转移户口为目的婚姻关系是否必然无效以转移户口关系是否必然无效</li>
+                        <li><span class="bl"></span>以转移户口为目的婚姻关系是否必然无效</li>
+                        <li><span class="bl"></span>以转移户口为目的婚姻关系是否必然无效</li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+        <!--无结果页-->
+        <div class="none" style="display: none;">
+            <img src="../images/none.png" alt="" />
+            <span class="img_text"></span>
+        </div>
+    </div>
+    <!-- 主体部分结束 -->
+    <!-- 底部开始 -->
+    <div class="footer clearfix">
+        <ul class="horizontal-ul fl clearfix">
+            <li class="margin-left16">
+                <a href="http://103.254.65.115:18092/#/help/aboutUs" class="normal-text link">关于我们</a>
+            </li>
+            <li class="margin-left16">
+                <a href="http://103.254.65.115:18092/#/help/guide" class="normal-text link">使用帮助</a>
+            </li>
+            <li class="margin-left16">
+                <a href="http://103.254.65.115:18092/#/help/law" class="normal-text link">法律声明</a>
+            </li>
+            <li class="margin-left16">
+                <a href="http://103.254.65.115:18092/#/help/secret" class="normal-text link">隐私保护</a>
+            </li>
+            <li class="margin-left16">
+                <a href="http://103.254.65.115:18092/#/help/contact" class="normal-text link">联系我们</a>
+            </li>
+            <li class="margin-left16">
+                <a href="http://103.254.65.115:18092/#/advice" class="normal-text link">意见反馈</a>
+            </li>
+        </ul>
+        <div class="fr">
+            <span class="normal-text">©2013-2017</span>
+            <span class="normal-text margin-left14">人民法院出版社版权所有</span>
+            <span class="normal-text margin-left14">京ICP备14059732号-1</span>
+        </div>
+    </div>
+    <!-- 底部结束 -->
+    <!-- 操作提示模态框开始 -->
+    <div class="tip_shadow">
+        <div class="tip_wrapper">
+            <span class="close_tip"></span>
+            <div class="tip_t">
+                <h3>操作提示</h3>
+                <p class="tip_text">抱歉，您未登录或没有权限，不能进行此操作！</p>
+            </div>
+            <div class="tip_b">
+                <a href="http://103.254.65.115:18092/#/login">点击登录</a>
+            </div>
+        </div>
+    </div>
+    <!-- 操作提示模态框结束 -->
+    <!-- 固定栏开始 -->
+    <div class="fixedBox">
+        <div>
+            <a href="javascript:void(0);" id="catalog_btn" class="catalog_btn fixed_btn" style="display: none;"></a>
+            <div class="catalog_box hide">
+                <ul>
+                    <li>暂无目录信息</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <a href="javascript:void(0);" id="backtop_btn" class="backtop_btn fixed_btn" style="display: none;"></a>
+        </div>
+    </div>
+    <!-- 固定栏结束 -->
+    <!--加载动画-->
+    <div class="shadow" style="display: none;">
+        <div class="shadowBox">
+            <img src="../images/loading.gif" style="height: 80px;margin-top: 54px" alt="">
+            <!--<span>加载中...</span>-->
+        </div>
+    </div>
+    
+    <script src="../js/jquery-2.1.1-min.js"></script>
+    <!--[if lte IE 8]>
+    <script src="../js/jquery.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-form.js"></script>
+    <script src="../js/public.js"></script>
+    <script src="../js/search_util.js?time=20180810_1"></script>
+    <script src="../js/header.js?time=20180810_1"></script>
+    <script src="../js/zhidaoDetails.js?time=20180810_1"></script>
+</body>
+
+</html>

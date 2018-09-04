@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>法信</title>
+    <link rel="stylesheet" href="../resource/font-awesome-4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="../css/public.css?time=20180824_1" />
+    <link rel="stylesheet" href="../css/header.css?time=20180824_1" />
+    <link rel="stylesheet" href="../css/result.css?time=20180824_1">
+</head>
+
+<body>
+    <!--header-->
+    <div class="out-header">
+        <div class="logo">
+            <a href="http://103.254.65.115:18092" class="fazhi-logo fl"></a>
+        </div>
+        <div class="center">
+            <div class="searchBox clearfix">
+                <div class="searchIpt fl">
+                    <!-- 模拟placeholder -->
+                    <div class="placeholder">搜索您感兴趣的案例内容</div>
+                    <!-- 搜索框 -->
+                    <input type="text" id="search_inp" class="search_inp">
+                    <!-- 文件名 -->
+                    <!-- <div id="filename-wrapper-js" class="filename-wrapper" style="display: none;">
+                    <p id="filename" class="filename">文件名</p>
+                    <i id="close-filename-js" class="close-filename">x</i>
+                </div> -->
+                    <!-- file控件 -->
+                    <!-- <form id="fileForIE89" name="fileForIE89" method="post" enctype="multipart/form-data">
+                    <span id="upload" class="upload">
+                            <input type="file" name="upFile" id="upFile" onkeydown="if(event.keyCode==13)return false;">
+                        </span>
+                </form> -->
+                    <!-- 全文搜索 -->
+                    <div class="searchBtn" id="searchBtn">
+                        <i></i>
+                    </div>
+                </div>
+                <!-- 联想词下拉框 -->
+                <div id="dropdown-wrapper" class="dropdown-wrapper" style="display: none;">
+                    <!-- TODO -->
+                </div>
+                <div class="search-r fl">
+                    <button id="resultSearch" class="resultSearch">结果中搜索</button>
+                </div>
+            </div>
+        </div>
+        <div class="nav">
+            <ul class="horizontal-ul clearfix">
+                <li>
+                    <a id="fazhi_link" class="header-text" href="javascript:void(0);">智能问答</a>
+                </li>
+                <li class="margin-left32">
+                    <a id="witnet_link" class="header-text header-text_h" href="javascript:void(0);">一站式服务</a>
+                </li>
+                <li class="margin-left32">
+                    <a id="caa_link" class="header-text" href="javascript:void(0);">类案推送</a>
+                </li>
+                <li class="margin-left32" style="position: relative;">
+                    <span class="user-info-module">
+                        <a class="login-text" href="http://103.254.65.115:18092/#/login">登录</a>
+                        <!-- <div class="gs-dropdown user-list-module dropdown-close">
+                            <span class="login-text-wrapper">
+                                <span class="login-text">国双1，您好</span>
+                    <span class="gs-dropdown-link">
+                                                    <i class="gs-icon-down"></i>
+                                                </span>
+                    </span>
+        </div> -->
+        </span>
+        <ul class="gs-dropdown-menu" style="display: none;">
+            <div class="gs-dropdown-items">
+                <ul>
+                    <li class="gs-dropdown-item active">
+                        <a href="http://103.254.65.115:18092/#/person/info">个人信息</a>
+                    </li>
+                    <li class="gs-dropdown-item">
+                        <a href="http://103.254.65.115:18092/#/person/changePsw">修改密码</a>
+                    </li>
+                    <li class="gs-dropdown-item">
+                        <a href="http://103.254.65.115:18092/#/person/collect">我的收藏</a>
+                    </li>
+                    <li class="gs-dropdown-item">
+                        <a href="http://103.254.65.115:18092/#/person/record">查询记录</a>
+                    </li>
+                    <li class="gs-dropdown-item" id="logout">
+                        <a href="javascript:void(0);">退出登录</a>
+                    </li>
+                </ul>
+            </div>
+        </ul>
+        </li>
+        </ul>
+    </div>
+    </div>
+    <!--main-->
+    <div id="main" style="min-height: 100%;">
+        <!--当前条件-->
+        <div class="main_top">
+            <div class="entry inner">
+                <a href="javascript:void(0)" style="cursor: default">当前条件：</a>
+                <div style="display: inline-block;margin-left: 80px;">
+                    <ul class="tabExtra" style="display: inline"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="inner main clearfix">
+            <!--tab栏-->
+            <div class="tab_box">
+                <ul class="clearfix"></ul>
+            </div>
+            <!--左侧导航栏-->
+            <div class="main_left fl">
+                <ul class="nav_left"></ul>
+            </div>
+            <!--右侧内容-->
+            <div class="main_right fl">
+                <div class="result_top clearfix"></div>
+                <div class="result_bottom">
+                    <ul></ul>
+                </div>
+                <!--翻页-->
+                <div class="pages">
+                    <div class="page"></div>
+                </div>
+            </div>
+            <!--无结果页-->
+            <div class="none" style="display: none;">
+                <img src="../images/none.png" alt="" />
+                <span class="img_text">未查询到结果，请修改条件重新查询</span>
+            </div>
+        </div>
+    </div>
+    <div class="text" style="display: none"></div>
+    <div class="shadow" style="display: none;">
+        <div class="shadowBox"><img src="../images/loading.gif" style="height: 80px;margin-top: 54px" alt="" /></div>
+    </div>
+    <!-- 固定栏开始 -->
+    <div class="fixedBox">
+        <div>
+            <a href="javascript:void(0);" id="backtop_btn" class="backtop_btn fixed_btn" style="display: none;"></a>
+        </div>
+    </div>
+    <!-- 底部开始 -->
+    <div class="footer clearfix">
+        <ul class="horizontal-ul fl clearfix">
+            <li class="margin-left16">
+                <a href="http://103.254.65.115:18092/#/help/aboutUs" class="normal-text link">关于我们</a>
+            </li>
+            <li class="margin-left16">
+                <a href="http://103.254.65.115:18092/#/help/guide" class="normal-text link">使用帮助</a>
+            </li>
+            <li class="margin-left16">
+                <a href="http://103.254.65.115:18092/#/help/law" class="normal-text link">法律声明</a>
+            </li>
+            <li class="margin-left16">
+                <a href="http://103.254.65.115:18092/#/help/secret" class="normal-text link">隐私保护</a>
+            </li>
+            <li class="margin-left16">
+                <a href="http://103.254.65.115:18092/#/help/contact" class="normal-text link">联系我们</a>
+            </li>
+            <li class="margin-left16">
+                <a href="http://103.254.65.115:18092/#/advice" class="normal-text link">意见反馈</a>
+            </li>
+        </ul>
+        <div class="fr">
+            <span class="normal-text">©2013-2017</span>
+            <span class="normal-text margin-left14">人民法院出版社版权所有</span>
+            <span class="normal-text margin-left14">京ICP备14059732号-1</span>
+        </div>
+    </div>
+    <!-- 底部结束 -->
+    <!-- 操作提示模态框开始 -->
+    <div class="tip_shadow">
+        <div class="tip_wrapper">
+            <span class="close_tip"></span>
+            <div class="tip_t">
+                <h3>操作提示</h3>
+                <p class="tip_text">抱歉，您未登录或没有权限，不能进行此操作！</p>
+            </div>
+            <div class="tip_b">
+                <a href="http://103.254.65.115:18092/#/login">点击登录</a>
+            </div>
+        </div>
+    </div>
+    <!-- 操作提示模态框结束 -->
+    <script src="../js/jquery-2.1.1-min.js"></script>
+    <!--只有IE8版本可见-->
+    <!--[if lte IE 8]>
+    <script src="../js/jquery.js"></script>
+    <![endif]-->
+    <!--    <script src="https://js.fundebug.cn/fundebug.1.1.2.min.js"
+            apikey="58c982a7da1cff8b4fa1247c98be1ae9ed42ef717fd7552e54ae4a51592111ca"></script>-->
+    <script src="../js/jquery-form.js"></script>
+    <script src="../js/jquery.pagination.js"></script>
+    <script src="../js/public.js?time=20180803_1"></script>
+    <script src="../js/DDDr.js?time=20180803_1"></script>
+    <script src="../js/result.js?time=20180803_1.js"></script>
+    <script src="../js/search_util.js?time=20180803_1.js"></script>
+    <script src="../js/header.js?time=20180803_1"></script>
+</body>
+
+</html>
